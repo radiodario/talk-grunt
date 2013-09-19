@@ -207,13 +207,91 @@ grunt.initConfig({
             </ul>
         </section>
 
+<section class="slide">
+    <h2>Tell Grunt where things are</h2>
+
+<textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="false">
+// configurable paths
+var yeomanConfig = {
+    app: 'app',
+    dist: 'dist'
+};
+</textarea>
+</section>
+
         <section class="slide">
-            <h1>Demo Time!</h1>
+            <h2>Serve my project!</h2>
+            <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="false">
+connect: {
+    options: {
+        port: 9000,
+        livereload: 35729,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+    },
+    livereload: {
+        options: {
+            open: true,
+            base: [
+                '.tmp',
+                yeomanConfig.app
+            ]
+        }
+    },
+    test: {
+        options: {
+            base: [
+                '.tmp',
+                'test',
+                yeomanConfig.app,
+            ]
+        }
+    },
+    dist: {
+        options: {
+            open: true,
+            base: yeomanConfig.dist
+        }
+    }
+},
+            </textarea>
         </section>
 
         <section class="slide">
-                <iframe src="http://localhost:8080" width="100%" height="600"></iframe>
+            <h2>Watch over my code!</h2>
+            <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="false">
+watch : {
+  // recompile the coffeescript, test it and reload.
+  // you'll get a nice BEEP if the tests don't pass.
+  coffee     : {
+    files : ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+    tasks : ['coffee:dist', 'connect:test', 'mocha'],
+    options: {
+      livereload: true
+    }
+  },
+  // If i change the tests, please run them and then
+  // reload
+  tests : {
+     files : ['test/{,*/}*.{js,html}'],
+     tasks : ['connect:test', 'mocha'],
+     options: {
+       livereload: true
+     }
+   }
+}
+            </textarea>
         </section>
+
+
+
+        <section class="slide">
+            <h1><a href="http://localhost:8080">Demo</a></h1>
+        </section>
+
+<!--         <section class="slide">
+                <iframe src="http://localhost:8080" width="100%" height="600"></iframe>
+        </section> -->
         
 
         <!-- build:js scripts/vendor.js -->
