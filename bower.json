@@ -7,7 +7,8 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2",
     "deck.js": "*",
-    "deck.js-codemirror": "git://github.com/iros/deck.js-codemirror.git#~0.0.5"
+    "deck.js-codemirror": "git://github.com/iros/deck.js-codemirror.git#~0.0.5",
+    "fittext": "*"
   },
   "devDependencies": {}
 }

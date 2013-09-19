@@ -5,7 +5,8 @@ require.config({
         deckjsHash: '../bower_components/deck.js/extensions/hash/deck.hash',
         deckjsCodemirror : '../bower_components/deck.js-codemirror/deck.codemirror',
         codemirror: '../bower_components/deck.js-codemirror/codemirror',
-        cmJssyntax: '../bower_components/deck.js-codemirror/mode/javascript/javascript'
+        cmJssyntax: '../bower_components/deck.js-codemirror/mode/javascript/javascript',
+        fitText: '../bower_components/fittext/fittext'
     },
     shim: {
         codemirror: {
@@ -22,13 +23,18 @@ require.config({
         },
         cmJssyntax: {
             deps: ['codemirror']
+        },
+        fitText: {
+            exports: ['fitText']
         }
     }
 });
 
-require(['app', 'jquery', 'deckjsHash', 'deckjsCodemirror', 'cmJssyntax', 'deckjs'], function (app, $) {
+
+require(['app', 'jquery', 'deckjsHash', 'deckjsCodemirror', 'cmJssyntax', 'deckjs' ], function (app, $, fitText) {
     'use strict';
     // use app here
     $.deck('.slide')
+    // fitText()
     
 });
