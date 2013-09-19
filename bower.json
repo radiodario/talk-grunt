@@ -6,7 +6,8 @@
     "requirejs": "~2.1.8",
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2",
-    "deck.js": "*"
+    "deck.js": "*",
+    "deck.js-codemirror": "git://github.com/iros/deck.js-codemirror.git#~0.0.5"
   },
   "devDependencies": {}
 }

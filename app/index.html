@@ -39,12 +39,14 @@
                 <li class="slide">A few years of experience building d3.js projects.</li>
                 <li class="slide">Frontend Developer for the Data Analytics and Visualisation</li>
             </ul>
-            <div class="slide goldenGatePic">
+        </section>
+
+        <section class="slide">
+            <div class="vcenter hcenter">
                 <img src="images/goldengate.jpg">
                 <p class="caption">Obligatory Picture of Javascript programmer by the golden gate</p>
             </div>
         </section>
-
         <section class="slide">
             <h2>The Trio</h2>
             <div class="vcenter">
@@ -65,7 +67,7 @@
         <section class="slide">
             <h2>Yeoman Generators</h2>
             <ul>
-                <li>Templates for your projects</li>
+                <li>Wizard-ish generators for your projects</li>
                 <li>A whole bunch of them!</li>
                 <li>Distributed as npm packages</li>
                 <li>They start with the prefix `generator`
@@ -80,8 +82,15 @@
         <section class="slide">
             <h2>Running a generator</h2>
             <ul>
-                
-
+                <li>Once installed, run it</li>
+                <li>Some generators are better than others.</li>
+                <li>Run one:
+                    <pre>yo webapp</pre>
+                    <img class="right" src="images/yoWebapp.png"></img>
+                </li>
+                <li>Once run, do:
+                    <pre>npm install && bower install</pre>
+                </li>
             </ul>
         </section>
 
@@ -93,25 +102,108 @@
                 <li>Built by the guys at Twitter</li>
                 <li>Able to keep track with any git repo that uses semver</li>
             </ul>
-
         </section>
+
+        <section class="slide">
+            <h2>bower.json</h2>
+            <p>A Typical bower.json you might find in the wild:</p>
+            <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+{
+  "name": "someProject",
+  "version": "0.0.1",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "requirejs": "~2.1.8",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "deck.js": "*",
+    "deck.js-codemirror": "git://github.com/iros/deck.js-codemirror.git#~0.0.5"
+  },
+  "devDependencies": {}
+}
+            </textarea>
+        </section>
+
 
         <section class="slide">
             <h2>Grunt</h2>
             <ul>
                 <li>Task Runner</li>
                 <li>Serve, Test, Minify, Watch, Reload</li>
-                <li>Configured via Gruntfile.js</li>
-                <li>CI-Friendly!</li>
+                <li>CI-Friendly</li>
+                <li>Loads of plugins.</li>
             </ul>
+            <img src="images/gruntplugins.png" class="hcenter">
         </section>
 
         <section class="slide">
             <h2>Gruntfile.js</h2>
-            <p>A Typical Gruntfile:</p>
-
+            <ul>
+                <li>Configured via Gruntfile.js</li>
+                <li>Think of it like a makefile</li>
+                <li>Nothing stops you from building a makefile for your js project.</li>
+            </ul>
         </section>
 
+        <section class="slide">
+            <h2>Grunt Tasks</h2>
+            <ul>
+                <li>This is a js file.</li>
+                <li>You have task-named properties.</li>
+                <li>And you can add your own.</li>
+                <li>When a task is run, Grunt looks for its configuration under a property of the same name.</li>
+            </ul>
+            <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+grunt.initConfig({
+  concat: {
+    // concat task configuration goes here.
+  },
+  uglify: {
+    // uglify task configuration goes here.
+  },
+  // Arbitrary non-task-specific properties.
+  my_property: 'whatever',
+  my_src_files: ['foo/*.js', 'bar/*.js'],
+});</textarea>
+        </section>
+
+
+        <section class="slide">
+            <h2>Grunt Tasks and Targets</h2>
+            <p>Tasks can have targets:</p>
+            <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+grunt.initConfig({
+  concat: {
+    foo: {
+      // concat task "foo" target options and files go here.
+    },
+    bar: {
+      // concat task "bar" target options and files go here.
+    },
+  },
+  uglify: {
+    bar: {
+      // uglify task "bar" target options and files go here.
+    },
+  },
+});
+</textarea>
+        </section>
+
+        <section class="slide">
+            <h2>Running tasks and targets</h2>
+            <ul>
+                <li>Call a task like this:
+                    <pre>grunt concat</pre>
+                    and it'll call all targets for this task, in sequence.
+                </li>
+
+                <li>Call a task with a target:
+                    <pre>grunt concat:foo</pre>
+                    and it'll run that specific target.
+                </li>
+            </ul>
+        </section>
 
         <section class="slide">
             <h1>Demo Time!</h1>

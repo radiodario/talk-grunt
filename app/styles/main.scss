@@ -7,3 +7,12 @@
 @import 'deck.js/themes/transition/fade';
 @import 'deck.js/themes/style/swiss';
 @import 'deck.js/extensions/hash/deck.hash';
+@import 'deck.js-codemirror/deck.codemirror';
+@import '../bower_components/deck.js-codemirror/themes/default.css';
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 100px;
+}
