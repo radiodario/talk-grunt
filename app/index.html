@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>grunttalk</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body class="deck-container">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <section class="slide">
+            <h1>Tooling for Javascript Projects</h1>
+        </section>
+
+        <section class="slide">    
+            <div class="vcenter"><em>Or how I learnt to stop worrying and love the Grunt<em></div>
+        </section>
+
+        <section class="slide">
+            <h2>Me Me Me...</h2>
+            <ul>
+                <li class="slide">Senior JS developer for the Data Analytics and Visualisation Team.</li>
+                <li class="slide">MA in Cognitive Science from Edinburgh University.</li>
+                <li class="slide">A few years of experience building d3.js projects.</li>
+                <li class="slide">Frontend Developer for the Data Analytics and Visualisation</li>
+            </ul>
+            <div class="slide goldenGatePic">
+                <img src="images/goldengate.jpg">
+                <p class="caption">Obligatory Picture of Javascript programmer by the golden gate</p>
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>The Trio</h2>
+            <div class="vcenter">
+                <img src="images/toolset.png">
+                <p class="slide">They're all based on node.js</p>
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>Yeoman</h2>
+            <ul>
+                <li>Templating and bootstraping</li>
+                <li>Series of generators</li>
+                <li>Bootstraps everything, from your build system to your .gitIgnore</li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <h2>Yeoman Generators</h2>
+            <ul>
+                <li>Templates for your projects</li>
+                <li>A whole bunch of them!</li>
+                <li>Distributed as npm packages</li>
+                <li>They start with the prefix `generator`
+                    <pre>npm seach generator</pre>
+                </li>
+                <li>When you find one that you like, install it
+                    <pre>npm install generator-webapp</pre>
+                </li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <h2>Running a generator</h2>
+            <ul>
+                
+
+            </ul>
+        </section>
+
+
+        <section class="slide">
+            <h2>Bower</h2>
+            <ul>
+                <li>Depencency Manager</li>
+                <li>Built by the guys at Twitter</li>
+                <li>Able to keep track with any git repo that uses semver</li>
+            </ul>
+
+        </section>
+
+        <section class="slide">
+            <h2>Grunt</h2>
+            <ul>
+                <li>Task Runner</li>
+                <li>Serve, Test, Minify, Watch, Reload</li>
+                <li>Configured via Gruntfile.js</li>
+                <li>CI-Friendly!</li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <h2>Gruntfile.js</h2>
+            <p>A Typical Gruntfile:</p>
+
+        </section>
+
+
+        <section class="slide">
+            <h1>Demo Time!</h1>
+        </section>
+
+        <section class="slide">
+                <iframe src="http://localhost:8080" width="100%" height="600"></iframe>
+        </section>
+        
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <!-- <script src="bower_components/jquery/jquery.js"></script> -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

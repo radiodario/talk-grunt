@@ -1,0 +1,9 @@
+//$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+//@import 'sass-bootstrap/lib/bootstrap';
+
+// deckjs stuff
+@import 'deck.js/core/deck.core';
+@import 'deck.js/themes/transition/fade';
+@import 'deck.js/themes/style/swiss';
+@import 'deck.js/extensions/hash/deck.hash';
